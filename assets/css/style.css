@@ -592,6 +592,11 @@ body::before {
   grid-template-columns: repeat(3, 1fr);
   gap: clamp(18px, 2.4vw, 26px);
 }
+/* 只有一个作品时居中显示，避免整行网格留白 */
+.works.works--single {
+  grid-template-columns: minmax(0, 440px);
+  justify-content: center;
+}
 .card {
   display: flex;
   flex-direction: column;
